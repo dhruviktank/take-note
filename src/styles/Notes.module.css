@@ -1,0 +1,315 @@
+.notePage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f7fc;
+    font-family: Arial, sans-serif;
+}
+
+.noteHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #4e73df;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileSection {
+    display: flex;
+    align-items: center;
+}
+
+.profileIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+}
+
+.userName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.newNoteButton {
+    background-color: #2e59d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newNoteButton:hover {
+    background-color: #1b4ca1;
+}
+
+.mainContent {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.filtersSection {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.filtersSection h3 {
+    margin-bottom: 10px;
+}
+
+.filterInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.notesSection {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.notesList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.noteCard {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.noteCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.noteCard h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4e73df;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Increased spacing for better readability */
+    margin-top: 10px;
+    padding: 5px 0;
+    border-top: 1px solid #f0f0f0; /* Optional separator for cleaner layout */
+    padding-top: 10px;
+}
+
+.tag {
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Subtle gradient for tags */
+    color: #005b50;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: capitalize; /* Capitalize tag text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.tag:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    background: linear-gradient(135deg, #9face6, #74ebd5); /* Reverse gradient on hover */
+}
+
+
+.noTags {
+    font-size: 0.875rem;
+    color: #757575;
+    /* Grey text */
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.actionButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.actionButton:hover {
+    transform: scale(1.05);
+}
+
+.editButton {
+    background-color: #e3f2fd;
+    /* Light blue */
+    color: #1e88e5;
+    /* Blue text */
+}
+
+.editButton:hover {
+    background-color: #bbdefb;
+    /* Slightly darker blue */
+}
+
+.viewButton {
+    background-color: #e8f5e9;
+    /* Light green */
+    color: #43a047;
+    /* Green text */
+}
+
+.viewButton:hover {
+    background-color: #c8e6c9;
+    /* Slightly darker green */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginationButton {
+    background-color: #ddd;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.paginationButton.active,
+.paginationButton:hover {
+    background-color: #4e73df;
+    color: #fff;
+}
+
+.noNotes {
+    font-size: 1rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tagFilter {
+    margin-top: 20px;
+}
+
+.tagSelect {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.filtersSection label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.filterInput {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+/* Title Filter */
+.titleFilter {
+    margin-bottom: 20px;
+}
+
+.titleFilter label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.filterInput {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+}
+
+/* Tag Filter */
+.tagFilter {
+    margin-top: 20px;
+}
+
+.tagCheckboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tagCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.tagCheckbox input {
+    margin-right: 5px;
+}
+
+.selectedTagsContainer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.selectedTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.selectedTag {
+    background-color: #74ebd5;
+    color: #00796b;
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.selectedTag:hover {
+    background-color: #9face6;
+    color: #fff;
+}

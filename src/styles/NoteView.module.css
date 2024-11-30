@@ -1,0 +1,141 @@
+/* Main Page Layout */
+.noteViewPage {
+    display: flex;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Left Sidebar */
+.leftSidebar {
+    width: 60px;
+    background-color: #7394f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+.leftSidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.leftSidebar button:hover {
+    transform: scale(1.1);
+}
+
+/* Content Wrapper */
+.contentWrapper {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 15px; */
+}
+
+.headerTitle {
+    display: flex;
+    gap: 15px;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    color: #4e73df;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.headerTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Note Content */
+.noteContainer {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.noteCard {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Metadata (Right Sidebar) */
+.metadata {
+    width: 150px;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.editButton {
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.editButton:hover {
+    background-color: #e6b800;
+}
+
+.saveButtonContainer {
+    /* text-align: center; */
+    margin-top: 20px;
+}
+
+.saveButton {
+    background-color: #4e73df;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+    background-color: #2e59d9;
+}
+
+.loadingText,
+.errorText {
+    text-align: center;
+    font-size: 1rem;
+    color: #757575;
+}
+
+.noteContent table, th, td{
+    border-collapse: collapse;
+    padding: 5px;
+    border: 1px solid rgb(164, 163, 163);
+}

@@ -1,0 +1,67 @@
+.homepage {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .heroSection {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+  }
+  
+  .heroSection h1, .dashboardSection h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .heroSection p, .dashboardSection p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .ctaButtons, .quickLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .btnPrimary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btnPrimary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btnSecondary {
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btnSecondary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .dashboardSection {
+    background: #f4f4f4;
+    padding: 40px 20px;
+    border-radius: 10px;
+  }
+  
+  .quickLinks button {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  

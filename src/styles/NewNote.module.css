@@ -1,0 +1,132 @@
+.newNotePage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f7fc;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #4e73df;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header h1 {
+    font-size: 20px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    /* max-width: 600px; */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.formGroup textarea {
+    resize: none;
+    height: 120px;
+}
+
+.saveButton {
+    background-color: #4e73df;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.saveButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.saveButton:hover:not(:disabled) {
+    background-color: #1b4ca1;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-radius: 16px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.tagRemove {
+    margin-left: 8px;
+    cursor: pointer;
+    color: #f44336;
+    font-weight: bold;
+}
+
+.tagInput {
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
