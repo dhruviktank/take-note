@@ -3,6 +3,7 @@
     display: flex;
     height: 100vh;
     background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Left Sidebar */
@@ -14,6 +15,7 @@
     align-items: center;
     padding: 10px 0;
     gap: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .leftSidebar button {
@@ -22,11 +24,12 @@
     color: white;
     font-size: 20px;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, color 0.2s;
 }
 
 .leftSidebar button:hover {
     transform: scale(1.1);
+    color: #d6e0ff;
 }
 
 /* Content Wrapper */
@@ -36,6 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow-y: auto;
 }
 
 /* Header */
@@ -43,12 +47,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 15px; */
+    gap: 15px;
 }
 
 .headerTitle {
     display: flex;
+    align-items: center;
     gap: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
 }
 
 .backButton {
@@ -57,15 +65,14 @@
     color: #4e73df;
     font-size: 18px;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
-.headerTitle {
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
+.backButton:hover {
+    color: #2e59d9;
 }
 
-/* Note Content */
+/* Note Container */
 .noteContainer {
     flex: 1;
     padding: 20px;
@@ -75,24 +82,39 @@
     overflow-y: auto;
 }
 
-.noteCard {
+.noteContent {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
 }
 
+.noteContent table,
+.noteContent th,
+.noteContent td {
+    border-collapse: collapse;
+    padding: 5px;
+    border: 1px solid rgb(164, 163, 163);
+    text-align: left;
+}
+
 /* Metadata (Right Sidebar) */
 .metadata {
-    width: 150px;
-    padding: 10px;
+    width: 180px;
+    padding: 15px;
     margin-left: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     color: #555;
 }
 
+.metadata p {
+    margin: 10px 0;
+}
+
+/* Buttons */
 .editButton {
     background-color: #ffcc00;
     color: #fff;
@@ -101,15 +123,18 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .editButton:hover {
     background-color: #e6b800;
+    transform: scale(1.05);
 }
 
 .saveButtonContainer {
-    /* text-align: center; */
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .saveButton {
@@ -120,13 +145,19 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .saveButton:hover {
     background-color: #2e59d9;
+    transform: scale(1.05);
 }
 
+.saveButton:active {
+    transform: scale(0.95);
+}
+
+/* Text and Error States */
 .loadingText,
 .errorText {
     text-align: center;
@@ -134,8 +165,24 @@
     color: #757575;
 }
 
-.noteContent table, th, td{
-    border-collapse: collapse;
-    padding: 5px;
-    border: 1px solid rgb(164, 163, 163);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .noteViewPage {
+        flex-direction: column;
+    }
+
+    .leftSidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .metadata {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contentWrapper {
+        padding: 10px;
+    }
 }
