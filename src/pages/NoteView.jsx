@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import TextEditor from '../components/TextEditor';
 import API from '../utils/api';
 import styles from '../styles/NoteView.module.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import toastify CSS
 
 const NoteView = () => {
   const { id } = useParams();
@@ -22,7 +24,7 @@ const NoteView = () => {
         setNote(res.data);
       } catch (err) {
         console.error(err);
-        alert('Failed to load note.');
+        toast.error('Failed to load note.');
       } finally {
         setIsLoading(false);
       }
@@ -34,23 +36,38 @@ const NoteView = () => {
   const handleSaveEdit = async () => {
     try {
       const token = localStorage.getItem('token');
-      await API.put(`/notes/${id}`, { content: editedContent }, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await API.put(
+        `/notes/${id}`,
+        { content: editedContent },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
       setNote((prevState) => ({
         ...prevState,
         content: editedContent,
       }));
       setIsEditMode(false);
-      alert('Note updated successfully');
+
+      // Show success toast
+      toast.success('Note updated successfully!');
     } catch (err) {
       console.error(err);
-      alert('Failed to update note.');
+      toast.error('Failed to update note.');
     }
   };
 
   return (
     <div className={styles.noteViewPage}>
+      {/* Toast Notification */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
+
       {/* Left Sidebar */}
       <aside className={styles.leftSidebar}>
         <button onClick={() => navigate('/')} title="Home">
